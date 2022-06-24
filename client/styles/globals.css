@@ -30,7 +30,6 @@ a {
   box-shadow: 3px 3px 15px 3px rgba(0, 0, 0, 0.25),
     -3px -3px 15px 3px rgba(0, 0, 0, 0.22);
   background-color: #ffffff;
-  z-index: 11;
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -235,4 +234,78 @@ a {
 .dropdown-background {
   border-top: 2px solid #7528f3;
   background-color: #e3e3e1;
+}
+
+.general-button {
+  text-align: center;
+  border: 1px solid #7528f3;
+  background-color: #7528f3;
+  color: white;
+}
+
+.general-button:hover,
+.general-button:focus,
+.general-button:active:focus {
+  color: white;
+  border: 1px solid var(--bs-indigo);
+  background-color: var(--bs-indigo);
+}
+
+.general-button:focus,
+.general-button:active:focus {
+  box-shadow: 0 0 0 0.25rem rgb(117 40 243 / 25%);
+}
+
+.edit-icon {
+  border: none;
+  background: none;
+  padding: 0;
+  color: black;
+}
+
+.edit-icon:hover {
+  background: none;
+  color: #7528f3;
+}
+
+.edit-icon:focus,
+.edit-icon:active:focus {
+  background: none;
+  color: #7528f3;
+  box-shadow: 0 0 0 0.25rem rgb(117 40 243 / 25%);
+}
+
+.del-icon {
+  border: none;
+  background: none;
+  padding: 0;
+  color: black;
+}
+
+.del-icon:hover {
+  background: none;
+  color: red;
+}
+
+.del-icon:focus,
+.del-icon:active:focus {
+  background: none;
+  color: red;
+  box-shadow: 0 0 0 0.25rem rgb(255 0 0 / 25%);
+}
+
+.header-container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control:focus,
+.form-control:active:focus,
+.form-select:focus,
+.form-select:active:focus {
+  border-color: rgb(117 40 243 / 60%);
+  box-shadow: 0 0 0 0.25rem rgb(117 40 243 / 25%);
 }

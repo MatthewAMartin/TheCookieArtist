@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import "semantic-ui-css/semantic.min.css";
 import "bootstrap/dist/css/bootstrap.css";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import "../styles/globals.css";
 import "../styles/embla.css";
 

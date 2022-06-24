@@ -9,7 +9,7 @@ const randomstring = require("randomstring");
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "",
+  password: "Soyoung.2308",
   database: "the_cookie_artist",
 });
 

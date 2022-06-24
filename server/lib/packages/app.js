@@ -6,14 +6,14 @@ const mysql = require("mysql");
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "",
+  password: "Soyoung.2308",
   database: "the_cookie_artist",
 });
 
 // Get all packages
 app.get("/api/packages", (req, res) => {
   // Define query string
-  const sqlQuery = "SELECT * from package";
+  const sqlQuery = "SELECT p.*, c.name from package p INNER JOIN cookie c ON c.cookie_id = p.cookie_id";
 
   // Query the database
   db.query(sqlQuery, (err, result) => {
@@ -67,11 +67,9 @@ app.post("/api/packages", (req, res) => {
   // Query the database
   db.query(sqlQuery, params, (err, result) => {
     if (err) throw err;
-    res
-      .status(200)
-      .json({
-        msg: `Added a package for cookie_id: ${params.cookie_id} successfully.`,
-      });
+    res.status(200).json({
+      msg: `Added a package for cookie_id: ${params.cookie_id} successfully.`,
+    });
   });
 });
 
